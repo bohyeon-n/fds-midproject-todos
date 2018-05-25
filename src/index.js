@@ -40,6 +40,8 @@ async function todosPage() {
   res.data.forEach(todos => {
     console.log(todos.id)
     const fragment = document.importNode(templates.todoItem, true);
+    const bodyEl = fragment.querySelector(".todo-item__body");
+    const buttonEl = fragment.querySelector(".todo-item__button")
     fragment.querySelector(".todo-item__body").textContent = todos.body;
     // 완료목록 데코레이션
     if(todos.complete) {
@@ -58,12 +60,25 @@ async function todosPage() {
       const res = await todoAPI.patch(`todos/${todos.id}`, payload)
       todosPage()
     })
+    
     // 할 일 수정하기 
-    // fragment.querySelector(".todo-item__modified-btn").addEventListener('click',async e => {
-    //   console.log('lsdakfn')
-    //   const modifiedFragment = document.importNode(templates.todoModified, true)
-    //   fragment.querySelector(".modified").appendChild(modifiedFragment)
-    // })
+    fragment.querySelector(".todo-item__modified-btn").addEventListener('click',async e => {
+      console.log('lsdakfn')
+      const modifiedFragment = document.importNode(templates.todoModified, true)
+      const modifiedEl = modifiedFragment.querySelector(".todo-modified")
+      bodyEl.textContent = ""
+      buttonEl.textContent = ""
+      bodyEl.appendChild(modifiedFragment)
+        modifiedEl.addEventListener("submit", async e => {
+          e.preventDefault()
+          const payload = {
+            body: e.target.elements.body.value
+          }
+          console.log(payload)
+          const res = await todoAPI.patch(`todos/${todos.id}`, payload)
+          todosPage()
+        })
+    })
     listFragment.querySelector(".todo-list").appendChild(fragment);
   });
   //  새 할 일 추가

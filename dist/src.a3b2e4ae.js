@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({34:[function(require,module,exports) {
+})({35:[function(require,module,exports) {
 var global = arguments[3];
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -828,7 +828,7 @@ var global = arguments[3];
   (function() { return this })() || Function("return this")()
 );
 
-},{}],30:[function(require,module,exports) {
+},{}],31:[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -865,10 +865,10 @@ if (hadRuntime) {
   }
 }
 
-},{"./runtime":34}],16:[function(require,module,exports) {
+},{"./runtime":35}],17:[function(require,module,exports) {
 module.exports = require("regenerator-runtime");
 
-},{"regenerator-runtime":30}],10:[function(require,module,exports) {
+},{"regenerator-runtime":31}],11:[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -881,7 +881,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],22:[function(require,module,exports) {
+},{}],23:[function(require,module,exports) {
 /*!
  * Determine if an object is a Buffer
  *
@@ -904,7 +904,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],8:[function(require,module,exports) {
+},{}],9:[function(require,module,exports) {
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -1209,7 +1209,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":10,"is-buffer":22}],17:[function(require,module,exports) {
+},{"./helpers/bind":11,"is-buffer":23}],18:[function(require,module,exports) {
 'use strict';
 
 var utils = require('../utils');
@@ -1223,7 +1223,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":8}],35:[function(require,module,exports) {
+},{"../utils":9}],36:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1246,7 +1246,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],27:[function(require,module,exports) {
+},{}],28:[function(require,module,exports) {
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -1266,7 +1266,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":35}],23:[function(require,module,exports) {
+},{"./enhanceError":36}],24:[function(require,module,exports) {
 'use strict';
 
 var createError = require('./createError');
@@ -1294,7 +1294,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":27}],24:[function(require,module,exports) {
+},{"./createError":28}],25:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1362,7 +1362,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":8}],25:[function(require,module,exports) {
+},{"./../utils":9}],26:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1417,7 +1417,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":8}],26:[function(require,module,exports) {
+},{"./../utils":9}],27:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1487,7 +1487,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":8}],28:[function(require,module,exports) {
+},{"./../utils":9}],29:[function(require,module,exports) {
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -1525,7 +1525,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],29:[function(require,module,exports) {
+},{}],30:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1580,7 +1580,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":8}],18:[function(require,module,exports) {
+},{"./../utils":9}],19:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1755,7 +1755,7 @@ module.exports = function xhrAdapter(config) {
     request.send(requestData);
   });
 };
-},{"./../utils":8,"./../core/settle":23,"./../helpers/buildURL":24,"./../helpers/parseHeaders":25,"./../helpers/isURLSameOrigin":26,"../core/createError":27,"./../helpers/btoa":28,"./../helpers/cookies":29}],19:[function(require,module,exports) {
+},{"./../utils":9,"./../core/settle":24,"./../helpers/buildURL":25,"./../helpers/parseHeaders":26,"./../helpers/isURLSameOrigin":27,"../core/createError":28,"./../helpers/btoa":29,"./../helpers/cookies":30}],20:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -1942,7 +1942,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],9:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 var process = require("process");
 'use strict';
 
@@ -2041,7 +2041,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-},{"./utils":8,"./helpers/normalizeHeaderName":17,"./adapters/xhr":18,"./adapters/http":18,"process":19}],20:[function(require,module,exports) {
+},{"./utils":9,"./helpers/normalizeHeaderName":18,"./adapters/xhr":19,"./adapters/http":19,"process":20}],21:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -2095,7 +2095,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":8}],31:[function(require,module,exports) {
+},{"./../utils":9}],32:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -2117,14 +2117,14 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":8}],14:[function(require,module,exports) {
+},{"./../utils":9}],15:[function(require,module,exports) {
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],32:[function(require,module,exports) {
+},{}],33:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2140,7 +2140,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],33:[function(require,module,exports) {
+},{}],34:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2156,7 +2156,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],21:[function(require,module,exports) {
+},{}],22:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -2244,7 +2244,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"./../utils":8,"./transformData":31,"../cancel/isCancel":14,"../defaults":9,"./../helpers/isAbsoluteURL":32,"./../helpers/combineURLs":33}],11:[function(require,module,exports) {
+},{"./../utils":9,"./transformData":32,"../cancel/isCancel":15,"../defaults":10,"./../helpers/isAbsoluteURL":33,"./../helpers/combineURLs":34}],12:[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./../defaults');
@@ -2325,7 +2325,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":9,"./../utils":8,"./InterceptorManager":20,"./dispatchRequest":21}],12:[function(require,module,exports) {
+},{"./../defaults":10,"./../utils":9,"./InterceptorManager":21,"./dispatchRequest":22}],13:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2346,7 +2346,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],13:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -2405,7 +2405,7 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":12}],15:[function(require,module,exports) {
+},{"./Cancel":13}],16:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2434,7 +2434,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],6:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./utils');
@@ -2488,9 +2488,9 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./utils":8,"./helpers/bind":10,"./core/Axios":11,"./defaults":9,"./cancel/Cancel":12,"./cancel/CancelToken":13,"./cancel/isCancel":14,"./helpers/spread":15}],5:[function(require,module,exports) {
+},{"./utils":9,"./helpers/bind":11,"./core/Axios":12,"./defaults":10,"./cancel/Cancel":13,"./cancel/CancelToken":14,"./cancel/isCancel":15,"./helpers/spread":16}],7:[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":6}],3:[function(require,module,exports) {
+},{"./lib/axios":8}],3:[function(require,module,exports) {
 "use strict";
 
 var _regenerator = require("babel-runtime/regenerator");
@@ -2561,24 +2561,26 @@ var loginPage = function () {
 
 
 var todosPage = function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee6() {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee8() {
     var _this2 = this;
 
     var listFragment, res;
-    return _regenerator2.default.wrap(function _callee6$(_context6) {
+    return _regenerator2.default.wrap(function _callee8$(_context8) {
       while (1) {
-        switch (_context6.prev = _context6.next) {
+        switch (_context8.prev = _context8.next) {
           case 0:
             listFragment = document.importNode(templates.todoList, true);
-            _context6.next = 3;
+            _context8.next = 3;
             return todoAPI.get("/todos");
 
           case 3:
-            res = _context6.sent;
+            res = _context8.sent;
 
             res.data.forEach(function (todos) {
               console.log(todos.id);
               var fragment = document.importNode(templates.todoItem, true);
+              var bodyEl = fragment.querySelector(".todo-item__body");
+              var buttonEl = fragment.querySelector(".todo-item__button");
               fragment.querySelector(".todo-item__body").textContent = todos.body;
               // 완료목록 데코레이션
               if (todos.complete) {
@@ -2643,45 +2645,101 @@ var todosPage = function () {
                   return _ref5.apply(this, arguments);
                 };
               }());
+
               // 할 일 수정하기 
-              // fragment.querySelector(".todo-item__modified-btn").addEventListener('click',async e => {
-              //   console.log('lsdakfn')
-              //   const modifiedFragment = document.importNode(templates.todoModified, true)
-              //   fragment.querySelector(".modified").appendChild(modifiedFragment)
-              // })
+              fragment.querySelector(".todo-item__modified-btn").addEventListener('click', function () {
+                var _ref6 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee6(e) {
+                  var modifiedFragment, modifiedEl;
+                  return _regenerator2.default.wrap(function _callee6$(_context6) {
+                    while (1) {
+                      switch (_context6.prev = _context6.next) {
+                        case 0:
+                          console.log('lsdakfn');
+                          modifiedFragment = document.importNode(templates.todoModified, true);
+                          modifiedEl = modifiedFragment.querySelector(".todo-modified");
+
+                          bodyEl.textContent = "";
+                          buttonEl.textContent = "";
+                          bodyEl.appendChild(modifiedFragment);
+                          modifiedEl.addEventListener("submit", function () {
+                            var _ref7 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee5(e) {
+                              var payload, res;
+                              return _regenerator2.default.wrap(function _callee5$(_context5) {
+                                while (1) {
+                                  switch (_context5.prev = _context5.next) {
+                                    case 0:
+                                      e.preventDefault();
+                                      payload = {
+                                        body: e.target.elements.body.value
+                                      };
+
+                                      console.log(payload);
+                                      _context5.next = 5;
+                                      return todoAPI.patch("todos/" + todos.id, payload);
+
+                                    case 5:
+                                      res = _context5.sent;
+
+                                      todosPage();
+
+                                    case 7:
+                                    case "end":
+                                      return _context5.stop();
+                                  }
+                                }
+                              }, _callee5, _this2);
+                            }));
+
+                            return function (_x5) {
+                              return _ref7.apply(this, arguments);
+                            };
+                          }());
+
+                        case 7:
+                        case "end":
+                          return _context6.stop();
+                      }
+                    }
+                  }, _callee6, _this2);
+                }));
+
+                return function (_x4) {
+                  return _ref6.apply(this, arguments);
+                };
+              }());
               listFragment.querySelector(".todo-list").appendChild(fragment);
             });
             //  새 할 일 추가
             listFragment.querySelector(".new-todos").addEventListener("submit", function () {
-              var _ref6 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee5(e) {
+              var _ref8 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee7(e) {
                 var payload, res;
-                return _regenerator2.default.wrap(function _callee5$(_context5) {
+                return _regenerator2.default.wrap(function _callee7$(_context7) {
                   while (1) {
-                    switch (_context5.prev = _context5.next) {
+                    switch (_context7.prev = _context7.next) {
                       case 0:
                         e.preventDefault();
                         payload = {
                           body: e.target.elements.body.value,
                           complete: false
                         };
-                        _context5.next = 4;
+                        _context7.next = 4;
                         return todoAPI.post("/todos", payload);
 
                       case 4:
-                        res = _context5.sent;
+                        res = _context7.sent;
 
                         todosPage();
 
                       case 6:
                       case "end":
-                        return _context5.stop();
+                        return _context7.stop();
                     }
                   }
-                }, _callee5, _this2);
+                }, _callee7, _this2);
               }));
 
-              return function (_x4) {
-                return _ref6.apply(this, arguments);
+              return function (_x6) {
+                return _ref8.apply(this, arguments);
               };
             }());
             rootEl.textContent = "";
@@ -2689,10 +2747,10 @@ var todosPage = function () {
 
           case 8:
           case "end":
-            return _context6.stop();
+            return _context8.stop();
         }
       }
-    }, _callee6, this);
+    }, _callee8, this);
   }));
 
   return function todosPage() {
@@ -2729,7 +2787,7 @@ var templates = {
   todoItem: document.querySelector("#todo-item").content,
   todoModified: document.querySelector("#todo-modified").content
 };loginPage();
-},{"babel-runtime/regenerator":16,"axios":5}],47:[function(require,module,exports) {
+},{"babel-runtime/regenerator":17,"axios":7}],48:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -2758,7 +2816,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58298' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58569' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -2899,5 +2957,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[47,3], null)
+},{}]},{},[48,3], null)
 //# sourceMappingURL=/src.a3b2e4ae.map

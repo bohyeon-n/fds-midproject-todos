@@ -34,16 +34,20 @@
   <!-- 할일 아이템 -->
   <template id="todo-item">
     <p class="todo-item__body"></p>
-    <button class="todo-item__remove-btn">삭제하기</button>
-    <button class="todo-item__complete-btn">완료하기</button>
-    <div class="modified">
-    <button class="todo-item__modified-btn">수정하기</button>
+    <div class="todo-item__button">
+      <button class="todo-item__remove-btn">삭제하기</button>
+      <button class="todo-item__complete-btn">완료하기</button>
+      <div class="modified">
+        <button class="todo-item__modified-btn">수정하기</button>
+      </div>
     </div>
   </template>
 
   <template id="todo-modified">
-    <input type="text" name="body">
-    <button class="todo-modified-btn">수정완료</button>
+    <form class="todo-modified">
+      <input type="text" name="body">
+      <button class="todo-modified-btn">수정완료</button>
+    </form>
   </template>
   <script src="./index.js"></script>
 </body>
